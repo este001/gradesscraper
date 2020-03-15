@@ -1,0 +1,5 @@
+Message: no such element: Unable to locate element: {"method":"link text","selector":"Studieplan"}
+  (Session info: chrome=80.0.3987.132)
+Message: no such element: Unable to locate element: {"method":"link text","selector":"Studieplan"}
+  (Session info: chrome=80.0.3987.132)
+module 'discobot' has no attribute 'on_ready'
