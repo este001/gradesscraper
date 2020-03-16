@@ -1,10 +1,12 @@
 import os
+import time
 from discobot import doit
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
 if __name__ == '__main__':
     driver = webdriver.Chrome('/usr/bin/chromedriver')
+    #driver = webdriver.Chrome(r'C:\Users\estef\Downloads\driver\chromedriver.exe')
     try:
 
         driver.get('https://nackademin.learnpoint.se/')
@@ -22,15 +24,15 @@ if __name__ == '__main__':
         # At this moment the tag where windows server grade has the id ..ct105_lblMarkName
         course = 5
         while True:
-
-            print(course)
             windowsServerBetyg = driver.find_element_by_id(
                 f'ctl00_MainContentPlaceHolder_ctlCoursesOfStudentControl_rptCourses_ctl0{course}_lblMarkName')
             if windowsServerBetyg.text == '':
+                driver.close()
                 os._exit(0)       
             else:
                 time.sleep(1)
                 driver.get(driver.current_url)
+                driver.close()
                 #course += 1
                 doit()
 
