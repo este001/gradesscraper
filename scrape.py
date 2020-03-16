@@ -1,11 +1,10 @@
-import time
-import asyncio
+import os
 from discobot import doit
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
 if __name__ == '__main__':
-    driver = webdriver.Chrome(r"/usr/lib/chromium-browser/chromedriver")
+    driver = webdriver.Chrome('/usr/bin/chromedriver')
     try:
 
         driver.get('https://nackademin.learnpoint.se/')
@@ -21,23 +20,19 @@ if __name__ == '__main__':
         studiePlan.click()
 
         # At this moment the tag where windows server grade has the id ..ct105_lblMarkName
-        course = 4
+        course = 5
         while True:
 
             print(course)
             windowsServerBetyg = driver.find_element_by_id(
                 f'ctl00_MainContentPlaceHolder_ctlCoursesOfStudentControl_rptCourses_ctl0{course}_lblMarkName')
             if windowsServerBetyg.text == '':
-                time.sleep(3600)
-                continue
+                os._exit(0)       
             else:
                 time.sleep(1)
                 driver.get(driver.current_url)
                 #course += 1
                 doit()
-                print("test4")
-
-            print("test5")
 
 
     except NoSuchElementException as e:

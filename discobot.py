@@ -13,7 +13,9 @@ def doit():
     async def on_ready():
         print("test")
         channel = client.get_channel(688709593584631831)
-        await channel.send('Grades are set')
+        await channel.send('Yoyoyo grades are set mother truckers')
         os._exit(0)
 
     client.run(TOKEN)
+
+doit()
