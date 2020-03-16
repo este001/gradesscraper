@@ -18,4 +18,5 @@ def doit():
 
     client.run(TOKEN)
 
-doit()
+if __name__ == '__main__':
+    doit()
