@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
 if __name__ == '__main__':
-    driver = webdriver.Chrome('/usr/bin/chromedriver')
+    driver = webdriver.Chrome()
     #driver = webdriver.Chrome(r'C:\Users\estef\Downloads\driver\chromedriver.exe')
     try:
 
