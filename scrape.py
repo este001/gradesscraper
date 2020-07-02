@@ -33,6 +33,7 @@ if __name__ == '__main__':
                 time.sleep(1)
                 driver.get(driver.current_url)
                 driver.close()
+                print("scrape")
                 #course += 1
                 doit()
 
