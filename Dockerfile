@@ -5,4 +5,4 @@ RUN sudo apt update
 RUN sudo apt install python3-pip -y
 COPY . /opt/
 WORKDIR /opt
-RUN pip3 install -r requirements.txt
+RUN sudo pip3 install -r requirements.txt

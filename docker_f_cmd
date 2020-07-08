@@ -1,0 +1,11 @@
+Steg
+1 Create unit-tests
+2 check docker image version control
+3 ansible
+	1. check out yaml
+
+steg 1 git pull master
+steg 2 docker build . -t grade
+steg 3 docker run -d --name grade-scraper -p 6666:6666 -v /dev/shm/:/dev/shm/ grade-test
+steg 4 docker exec grade.scraper python3 scrape.py
+docker run --rm -d --name grade-scraper -p 6666:6666 -v /dev/shm/:/dev/shm/ grade-scrape python3 scrape.py
