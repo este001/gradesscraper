@@ -41,9 +41,9 @@ def click_login(driver):
 def login_user(driver):
     #Enters credentials
     loginUser = driver.find_element_by_name('ctl00$MainContentPlaceHolder$ctlUserLoginControl$txtUserName')
-    loginUser.send_keys('syh15s010')
+    loginUser.send_keys('username')
     loginPass = driver.find_element_by_name('ctl00$MainContentPlaceHolder$ctlUserLoginControl$txtPassword')
-    loginPass.send_keys('Atkk5a7d1210')
+    loginPass.send_keys('password')
 
 def get_url(driver):
     driver.get('https://nackademin.learnpoint.se/')
