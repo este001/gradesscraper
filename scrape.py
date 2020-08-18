@@ -12,9 +12,9 @@ if __name__ == '__main__':
         driver.get('https://nackademin.learnpoint.se/')
 
         loginUser = driver.find_element_by_name('ctl00$MainContentPlaceHolder$ctlUserLoginControl$txtUserName')
-        loginUser.send_keys('syh15s010')
+        loginUser.send_keys('username')
         loginPass = driver.find_element_by_name('ctl00$MainContentPlaceHolder$ctlUserLoginControl$txtPassword')
-        loginPass.send_keys('Atkk5a7d1210')
+        loginPass.send_keys('password')
         loginButton = driver.find_element_by_name('ctl00$MainContentPlaceHolder$ctlUserLoginControl$btnLogin')
         loginButton.click()
 
